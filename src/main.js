@@ -4,7 +4,8 @@ const app = new App({
 	target: document.body,
 	props: {
 		name: 'Cire',
-		level: 'A1'
+		level: 'A1',
+		
 	}
 });
 

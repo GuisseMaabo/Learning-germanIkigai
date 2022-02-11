@@ -1,15 +1,23 @@
 <script>
 	export let name  ;
 	export let level ;
+
+	// Handle click that changes the level 
 	const handleClick = () => {
 		level = 'A2';
+	}
+	// handle the levels 
+	const handleInput = (e) => {
+		level = e.target.value;
 	}
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p> Your current german level is { level }</p>
-	<button on:click={handleClick}> Pass to the next level </button>
+	<h1>Erlösung {name}! ==> Hello {name}</h1>
+	<p> Your current german level is { level } ==> Ihr aktuelles Deutschniveau ist { level }</p>
+
+	<button on:click={handleClick}> Pass to the next level ==> Pass zum nächsten Level </button>
+	<input type="text" on:input={handleInput}>
 </main>
 
 <style>
