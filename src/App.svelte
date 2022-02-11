@@ -1,32 +1,22 @@
 <script>
-	let firstname="Cire"  ;
-	let level = "A1" ;
-	let lastname ="Guisse"
+	 let students = [
+		 {name: "yoshi", level:"A1", age:"20"},
+		 {name: "kyohei", level:"A2", age:"17"},
+		 {name: "yuri", level:"A1", age:"19"},
 
-;	// Handle click that changes the level 
-	const handleClick = () => {
-		level = 'A2';
-	}
-	// handle the levels One way binding and two binding  by adding the value of the variable in the input 
-	const handleInput = (e) => {
-		level = e.target.value;
-	}
-$: fullname = `${firstname} ${lastname}`;
+	 ]; 
 
 </script>
 
 <main>
-	<h1>Erlösung {fullname}! ==> Hello {fullname}</h1>
-	<p> Your current german level is { level } ==> Ihr aktuelles Deutschniveau ist { level }</p>
-	<!-- Eevnt Handler with a button > -->
-	<!--<button on:click={handleClick}> Pass to the next level ==> Pass zum nächsten Level </button>-->
-	<!--One way binding and two binding  by adding the value of the variable in the input-->
-	<!--<input type="text" on:input={handleInput} value={level}>-->
-	<input type="text" bind:value={firstname}>
-	<input type="text" bind:value={lastname}>
-	<input type="text" bind:value={level}>
-
-
+	{#each students as student}
+	<div>
+		<h3>{student.name}</h3>
+		<p>{student.age} years old, {student.level} level </p>  
+	</div>
+	{:else} 
+	<p>No student subscribed yet </p>
+	{/each}
 </main>
 
 <style>
@@ -37,12 +27,7 @@ $: fullname = `${firstname} ${lastname}`;
 		margin: 0 auto;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+
 
 	@media (min-width: 640px) {
 		main {
