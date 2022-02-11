@@ -25,4 +25,9 @@ let isOpen = true;
     text-align: center;
     background:white;
 }
+
+.open .modal-content {
+    background: crimson;
+    color:  white;
+}
 </style>
