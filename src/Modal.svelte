@@ -1,11 +1,16 @@
 <script>
+    // stopPropagation - stop the event bubling or capturing any further 
+    // capture - fires the handler during the capture phase not bubbling 
+    // once - makes sure the event can only fire once (removes handler)
+    // preventDefault - prevent the default action (run e.preventDefault))
+    // self - only fires the event if the clicked element is the target 
 export let showModal = false; 
 export let isOpen = true;
 export let message; 
 </script>
 
 {#if showModal}
-<div class="backdrop" class:open={isOpen} on:click>
+<div class="backdrop" class:open={isOpen} on:click|self>
     <div class="modal-content">
         <p> { message }</p>
     </div>
