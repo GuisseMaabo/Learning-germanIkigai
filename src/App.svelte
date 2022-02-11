@@ -6,7 +6,7 @@
 	const handleClick = () => {
 		level = 'A2';
 	}
-	// handle the levels 
+	// handle the levels One way binding and two binding  by adding the value of the variable in the input 
 	const handleInput = (e) => {
 		level = e.target.value;
 	}
@@ -17,7 +17,11 @@
 	<p> Your current german level is { level } ==> Ihr aktuelles Deutschniveau ist { level }</p>
 
 	<button on:click={handleClick}> Pass to the next level ==> Pass zum nächsten Level </button>
-	<input type="text" on:input={handleInput}>
+	<!--One way binding and two binding  by adding the value of the variable in the input-->
+	<!--<input type="text" on:input={handleInput} value={level}>-->
+	<!--<input type="text" on:input={handleInput} value={level}>-->
+	<input type="text" bind:value={level}>
+
 </main>
 
 <style>
