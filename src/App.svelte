@@ -17,6 +17,9 @@
 	{#each students as student}
 	<div>
 		<h3>{student.name}</h3>
+		{#if student.level === "A1"}
+		<h4>Keep the work up {student.name}</h4>
+		{/if}
 		<p>{student.age} years old, {student.level} level </p>  
 		<button on:click= {() => handleClick( student.name)}> delete </button>
 	</div>
