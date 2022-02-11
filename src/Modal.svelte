@@ -1,11 +1,11 @@
 <script>
-let showModal = true; 
+export let showModal = false; 
 export let isOpen = true;
 export let message; 
 </script>
 
 {#if showModal}
-<div class="backdrop" class:open={isOpen}>
+<div class="backdrop" class:open={isOpen} on:click>
     <div class="modal-content">
         <p> { message }</p>
     </div>

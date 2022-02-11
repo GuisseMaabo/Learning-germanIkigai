@@ -12,9 +12,15 @@
 		 // console.log(name);
 	 }
 
+	 let showModal	 = false;
+	 let toggleModal = () =>{
+		 showModal = !showModal;
+	 }; 
+
 </script>
-<Modal message="Let's learn german"/>
+<Modal message="Let's learn german" {showModal} on:click={toggleModal}/>
 <main>
+	<button on:click={toggleModal}>Open Modal</button>
 	{#each students as student}
 	<div>
 		<h3>{student.name}</h3>
