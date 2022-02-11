@@ -1,4 +1,5 @@
 <script>
+	import Modal from	'./Modal.svelte';
 	 let students = [
 		 {name: "yoshi", level:"A1", age:"20"},
 		 {name: "kyohei", level:"A2", age:"17"},
@@ -12,7 +13,7 @@
 	 }
 
 </script>
-
+<Modal/>
 <main>
 	{#each students as student}
 	<div>
