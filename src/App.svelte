@@ -13,7 +13,7 @@
 	 }
 
 </script>
-<Modal/>
+<Modal message="Let's learn german"/>
 <main>
 	{#each students as student}
 	<div>

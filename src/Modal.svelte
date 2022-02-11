@@ -1,12 +1,13 @@
 <script>
 let showModal = true; 
-let isOpen = true;
+export let isOpen = true;
+export let message; 
 </script>
 
 {#if showModal}
 <div class="backdrop" class:open={isOpen}>
     <div class="modal-content">
-        <p> Sign up for free </p>
+        <p> { message }</p>
     </div>
 </div>
 {/if}
