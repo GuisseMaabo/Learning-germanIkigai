@@ -5,6 +5,11 @@
 		 {name: "yuri", level:"A1", age:"19"},
 
 	 ]; 
+	 const handleClick = (name) => {
+		 // Delete the student from the list
+		 students = students.filter((student) => student.name != name)
+		 // console.log(name);
+	 }
 
 </script>
 
@@ -13,6 +18,7 @@
 	<div>
 		<h3>{student.name}</h3>
 		<p>{student.age} years old, {student.level} level </p>  
+		<button on:click= {() => handleClick( student.name)}> delete </button>
 	</div>
 	{:else} 
 	<p>No student subscribed yet </p>
