@@ -18,9 +18,16 @@
 	 }; 
 
 </script>
-<Modal message="Let's learn german" {showModal} on:click={toggleModal}/>
+<Modal  {showModal} on:click={toggleModal}>
+	<h3> Add a new Student </h3>
+	<form>
+		<input type="text" placeholder="name">
+		<input type="text" placeholder="level">
+		<button>Add a student </button>
+	</form>
+</Modal>	
 <main>
-	<button on:click={toggleModal}>Open Modal</button>
+	<button on:click|once={toggleModal}>Open Modal</button>
 	{#each students as student}
 	<div>
 		<h3>{student.name}</h3>

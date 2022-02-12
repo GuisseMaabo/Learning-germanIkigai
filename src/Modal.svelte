@@ -6,13 +6,13 @@
     // self - only fires the event if the clicked element is the target 
 export let showModal = false; 
 export let isOpen = true;
-export let message; 
+
 </script>
 
 {#if showModal}
 <div class="backdrop" class:open={isOpen} on:click|self>
     <div class="modal-content">
-        <p> { message }</p>
+        <slot></slot>
     </div>
 </div>
 {/if}
