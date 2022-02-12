@@ -1,5 +1,6 @@
 <script>
 	import Modal from	'./Modal.svelte';
+	import AddStudent from './AddStudent.svelte';
 	 let students = [
 		 {name: "yoshi", level:"A1", age:"20"},
 		 {name: "kyohei", level:"A2", age:"17"},
@@ -19,12 +20,7 @@
 
 </script>
 <Modal  {showModal} on:click={toggleModal}>
-	<h3> Add a new Student </h3>
-	<form>
-		<input type="text" placeholder="name">
-		<input type="text" placeholder="level">
-		<button>Add a student </button>
-	</form>
+<AddStudent/>
 </Modal>	
 <main>
 	<button on:click|once={toggleModal}>Open Modal</button>
