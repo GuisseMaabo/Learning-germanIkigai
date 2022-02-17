@@ -1,4 +1,5 @@
 <script>
+    import Button from  '../shared/Button.svelte';
     let fields = {course:'', listening:'', writing:''};
     const submitHandler = () => {
        // console.log(fields);
@@ -18,7 +19,7 @@
         <label for="writing"> Writing: </label>
         <input type="text" id="writing"  bind:value={fields.writing}>
     </div>
-    <button>    Add a Course    </button>
+    <Button>    Add a Course    </Button>
 </form>
 <style>
     form{
