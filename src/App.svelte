@@ -7,9 +7,12 @@ import Tabs from './shared/Tabs.svelte';
 
 
 
+
+
+
 // Tabs 
 
-let items = ['Current Courses', 'Add New Courses']
+let items = ['Current Courses', 'Participate to a course']
 let activeItems = 'Current Courses';
 
 const tabChange = (e)=> activeItems = e.detail;
@@ -21,18 +24,15 @@ const tabChange = (e)=> activeItems = e.detail;
  <Tabs {activeItems} {items} on:tabChange={tabChange}/>
  {#if activeItems === 'Current Courses'}
 	<p> courses list goes here </p>
- {:else if activeItems === 'Add New Courses'}
+ {:else if activeItems === 'Participate to a course'}
 	<CreateCourseForm />
  {/if}
 </main>
 <Footer/>
-
 <style>
 	main {
 		max-width: 960px;
 		margin: 40px auto;
 		
-	}
-
-	
+	}	
 </style>
